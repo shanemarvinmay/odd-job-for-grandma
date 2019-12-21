@@ -42,7 +42,8 @@
         <img src="7.png" id="g" />
     </div>
     <hr>
-    <button id="download">download</button>
+        <h3>Download your stuff!</h3>
+        <button id="download">download</button>
     <script>
         var canvas = new fabric.Canvas('c');
 
@@ -72,103 +73,126 @@
         }
 
         // adding a frame 
-        // document.querySelector("#a").onclick = () => {
-        //     var imgElement = document.getElementById('a');
-        //     var imgInstance = new fabric.Image(imgElement, {
-        //         left: 100,
-        //         top: 100,
-        //         angle: 0,
-        //         opacity: 0.85,
-                // width: 200,
-                // height: 200,
-        //     });
-        //     canvas.add(imgInstance);
-        // };
+        // fabric.util.loadImage("https://raw.githubusercontent.com/shanemarvinmay/odd-job-for-grandma/master/1.png", function(img) {
+        //     var object = new fabric.Image(img);
+        //     object.set({ 
+        //             left: 200, 
+        //             top: 300
+        //         });
+        //         object.hasRotatingPoint = true;
+        //         object.scaleX = object.scaleY = .25;
+        //         canvas.add(object);
+        //         canvas.renderAll();    
+        //     }, null, {crossOrigin: 'Anonymous'});
+            // canvas.renderAll();
         document.querySelector("#b").onclick = () => {
-            var imgElement = document.getElementById('b');
-            var imgInstance = new fabric.Image(imgElement, {
-                left: 0,
-                top: 0,
-                angle: 0,
-                opacity: 0.85,
-                // width: 200,
-                //height: 200,
-                scaleX: .25,
-                scaleY: .25
-            });
-            canvas.add(imgInstance);
-        };
-        document.querySelector("#b").onclick = () => {
-            var imgElement = document.getElementById('b');
-            var imgInstance = new fabric.Image(imgElement, {
-                left: 0,
-                top: 0,
-                angle: 0,
-                opacity: 0.85,
-                // width: 200,
-                //height: 200,
-                scaleX: .25,
-                scaleY: .25
-            });
-            canvas.add(imgInstance);
-        };
-        document.querySelector("#c").onclick = () => {
-            var imgElement = document.getElementById('c');
-            var imgInstance = new fabric.Image(imgElement, {
-                left: 0,
-                top: 0,
-                angle: 0,
-                opacity: 0.85,
-                // width: 200,
-                //height: 200,
-                scaleX: .25,
-                scaleY: .25
-            });
-            canvas.add(imgInstance);
-        };
-        document.querySelector("#d").onclick = () => {
-            var imgElement = document.getElementById('d');
-            var imgInstance = new fabric.Image(imgElement, {
-                left: 0,
-                top: 0,
-                angle: 0,
-                opacity: 0.85,
-                // width: 200,
-                //height: 200,
-                scaleX: .25,
-                scaleY: .25
-            });
-            canvas.add(imgInstance);
-        };
-        document.querySelector("#e").onclick = () => {
-            var imgElement = document.getElementById('e');
-            var imgInstance = new fabric.Image(imgElement, {
-                left: 0,
-                top: 0,
-                angle: 0,
-                opacity: 0.85,
-                // width: 200,
-                //height: 200,
-                scaleX: .25,
-                scaleY: .25
-            });
-            canvas.add(imgInstance);
-        };
-        document.querySelector("#f").onclick = () => {
-            var imgElement = document.getElementById('f');
-            var imgInstance = new fabric.Image(imgElement, {
-                left: 0,
-                top: 0,
-                angle: 0,
-                opacity: 0.85,
-                // width: 200,
-                //height: 200,
-                scaleX: .25,
-                scaleY: .25
-            });
-            canvas.add(imgInstance);
+            fabric.util.loadImage("https://raw.githubusercontent.com/shanemarvinmay/odd-job-for-grandma/master/2.png", function(img) {
+            var object = new fabric.Image(img);
+            object.set({ 
+                    left: 10, 
+                    top: 10,
+                    scaleX: .25,
+                    scaleY: .25
+                });
+                object.hasRotatingPoint = true;
+                object.scaleX = object.scaleY = .25;
+                canvas.add(object);
+                canvas.renderAll();    
+            }, null, {crossOrigin: 'Anonymous'});
+
+            canvas.renderAll();
         };
         
+        document.querySelector("#c").onclick = () => {
+            fabric.util.loadImage("https://raw.githubusercontent.com/shanemarvinmay/odd-job-for-grandma/master/3.png", function(img) {
+            var object = new fabric.Image(img);
+            object.set({ 
+                    left: 10, 
+                    top: 10,
+                    scaleX: .25,
+                    scaleY: .25
+                });
+                object.hasRotatingPoint = true;
+                object.scaleX = object.scaleY = .25;
+                canvas.add(object);
+                canvas.renderAll();    
+            }, null, {crossOrigin: 'Anonymous'});
+
+            canvas.renderAll();
+        };
+        document.querySelector("#d").onclick = () => {
+            
+            fabric.util.loadImage("https://raw.githubusercontent.com/shanemarvinmay/odd-job-for-grandma/master/4.png", function(img) {
+            var object = new fabric.Image(img);
+            object.set({ 
+                    left: 10, 
+                    top: 10,
+                    scaleX: .25,
+                    scaleY: .25
+                });
+                object.hasRotatingPoint = true;
+                object.scaleX = object.scaleY = .25;
+                canvas.add(object);
+                canvas.renderAll();    
+            }, null, {crossOrigin: 'Anonymous'});
+
+            canvas.renderAll();
+        };
+        document.querySelector("#e").onclick = () => {
+            
+            fabric.util.loadImage("https://raw.githubusercontent.com/shanemarvinmay/odd-job-for-grandma/master/5.png", function(img) {
+            var object = new fabric.Image(img);
+            object.set({ 
+                    left: 10, 
+                    top: 10,
+                    scaleX: .25,
+                    scaleY: .25
+                });
+                object.hasRotatingPoint = true;
+                object.scaleX = object.scaleY = .25;
+                canvas.add(object);
+                canvas.renderAll();    
+            }, null, {crossOrigin: 'Anonymous'});
+
+            canvas.renderAll();
+        };
+        document.querySelector("#f").onclick = () => {
+            
+            fabric.util.loadImage("https://raw.githubusercontent.com/shanemarvinmay/odd-job-for-grandma/master/6.png", function(img) {
+            var object = new fabric.Image(img);
+            object.set({ 
+                    left: 10, 
+                    top: 10,
+                    scaleX: .25,
+                    scaleY: .25
+                });
+                object.hasRotatingPoint = true;
+                object.scaleX = object.scaleY = .25;
+                canvas.add(object);
+                canvas.renderAll();    
+            }, null, {crossOrigin: 'Anonymous'});
+
+            canvas.renderAll();
+        };
+        document.querySelector("#g").onclick = () => {
+            
+            fabric.util.loadImage("https://raw.githubusercontent.com/shanemarvinmay/odd-job-for-grandma/master/7.png", function(img) {
+            var object = new fabric.Image(img);
+            object.set({ 
+                    left: 10, 
+                    top: 10,
+                    scaleX: .25,
+                    scaleY: .25
+                });
+                object.hasRotatingPoint = true;
+                object.scaleX = object.scaleY = .25;
+                canvas.add(object);
+                canvas.renderAll();    
+            }, null, {crossOrigin: 'Anonymous'});
+
+            canvas.renderAll();
+        };
+
         // downloading the canvas as a pdf 
         document.querySelector('#download').addEventListener("click", function() {
             // only jpeg is supported by jsPDF
@@ -180,19 +204,7 @@
         }, false);
 
         //image
-fabric.util.loadImage("1.png", function(img) {
-    var object = new fabric.Image(img);
-    object.set({ 
-        left: 200, 
-        top: 300
-    });
-    object.hasRotatingPoint = true;
-    object.scaleX = object.scaleY = .25;
-    canvas.add(object);
-    canvas.renderAll();    
-}, null, {crossOrigin: 'Anonymous'});
 
-canvas.renderAll();
     </script>
 </body>
 </html>
