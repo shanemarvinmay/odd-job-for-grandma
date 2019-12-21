@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>For Grandma</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.5.0/fabric.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.min.js"></script> -->
+    <style>
+        img{
+            max-width: 25vw;
+            max-height: 25vh;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hey Grandma!</h1>
+    <h2>Instructions</h2>
+    <ol>
+        <li>Click on one of the frames below</li>
+        <li>The frame will be adjustable, so adjust it however you'd like</li>
+        <li>Upload your picture</li>
+        <li>The picture will be adjustable, so adjust it however you'd like</li>
+        <li>Then download</li>
+    </ol>
+    <hr>
+    <canvas id="c" width="400" height="400" style="border: 1px solid #000" crossorigin="Anonymous"></canvas>
+    <hr>
+    <h3>Upload Your File!</h3>
+    <input type="file" id="imgLoader">
+    <hr>
+    <div>
+        <h3>Chose a Frame!</h3>
+        <!-- <img src="1.png" id="a" /> -->
+        <img src="2.png" id="b" />
+        <img src="3.png" id="c" />
+        <img src="4.png" id="d" />
+        <img src="5.png" id="e" />
+        <img src="6.png" id="f" />
+        <img src="7.png" id="g" />
+    </div>
+    <hr>
+    <button id="download">download</button>
+    <script>
+        var canvas = new fabric.Canvas('c');
+
+        // uploading img to canvas 
+        document.getElementById('imgLoader').onchange = function handleImage(e) {
+            var reader = new FileReader();
+            reader.onload = function (event) { console.log('fdsf');
+                var imgObj = new Image();
+                imgObj.src = event.target.result;
+                imgObj.onload = function () {
+                    // start fabricJS stuff
+                    var image = new fabric.Image(imgObj);
+                    image.set({
+                        left: 250,
+                        top: 250,
+                        angle: 0,
+                        padding: 10,
+                        cornersize: 10,
+                        
+                    });
+                    //image.scale(getRandomNum(0.1, 0.25)).setCoords();
+                    canvas.add(image);     
+                    // end fabricJS stuff
+                }   
+            }
+            reader.readAsDataURL(e.target.files[0]);
+        }
+
+        // adding a frame 
+        // document.querySelector("#a").onclick = () => {
+        //     var imgElement = document.getElementById('a');
+        //     var imgInstance = new fabric.Image(imgElement, {
+        //         left: 100,
+        //         top: 100,
+        //         angle: 0,
+        //         opacity: 0.85,
+                // width: 200,
+                // height: 200,
+        //     });
+        //     canvas.add(imgInstance);
+        // };
+        document.querySelector("#b").onclick = () => {
+            var imgElement = document.getElementById('b');
+            var imgInstance = new fabric.Image(imgElement, {
+                left: 0,
+                top: 0,
+                angle: 0,
+                opacity: 0.85,
+                // width: 200,
+                //height: 200,
+                scaleX: .25,
+                scaleY: .25
+            });
+            canvas.add(imgInstance);
+        };
+        document.querySelector("#b").onclick = () => {
+            var imgElement = document.getElementById('b');
+            var imgInstance = new fabric.Image(imgElement, {
+                left: 0,
+                top: 0,
+                angle: 0,
+                opacity: 0.85,
+                // width: 200,
+                //height: 200,
+                scaleX: .25,
+                scaleY: .25
+            });
+            canvas.add(imgInstance);
+        };
+        document.querySelector("#c").onclick = () => {
+            var imgElement = document.getElementById('c');
+            var imgInstance = new fabric.Image(imgElement, {
+                left: 0,
+                top: 0,
+                angle: 0,
+                opacity: 0.85,
+                // width: 200,
+                //height: 200,
+                scaleX: .25,
+                scaleY: .25
+            });
+            canvas.add(imgInstance);
+        };
+        document.querySelector("#d").onclick = () => {
+            var imgElement = document.getElementById('d');
+            var imgInstance = new fabric.Image(imgElement, {
+                left: 0,
+                top: 0,
+                angle: 0,
+                opacity: 0.85,
+                // width: 200,
+                //height: 200,
+                scaleX: .25,
+                scaleY: .25
+            });
+            canvas.add(imgInstance);
+        };
+        document.querySelector("#e").onclick = () => {
+            var imgElement = document.getElementById('e');
+            var imgInstance = new fabric.Image(imgElement, {
+                left: 0,
+                top: 0,
+                angle: 0,
+                opacity: 0.85,
+                // width: 200,
+                //height: 200,
+                scaleX: .25,
+                scaleY: .25
+            });
+            canvas.add(imgInstance);
+        };
+        document.querySelector("#f").onclick = () => {
+            var imgElement = document.getElementById('f');
+            var imgInstance = new fabric.Image(imgElement, {
+                left: 0,
+                top: 0,
+                angle: 0,
+                opacity: 0.85,
+                // width: 200,
+                //height: 200,
+                scaleX: .25,
+                scaleY: .25
+            });
+            canvas.add(imgInstance);
+        };
+        
+        // downloading the canvas as a pdf 
+        document.querySelector('#download').addEventListener("click", function() {
+            // only jpeg is supported by jsPDF
+            var imgData = canvas.toDataURL("image/jpeg", 1.0);
+            var pdf = new jsPDF();
+
+            pdf.addImage(imgData, 'JPEG', 0, 0);
+            pdf.save("download.pdf");
+        }, false);
+
+        //image
+fabric.util.loadImage("1.png", function(img) {
+    var object = new fabric.Image(img);
+    object.set({ 
+        left: 200, 
+        top: 300
+    });
+    object.hasRotatingPoint = true;
+    object.scaleX = object.scaleY = .25;
+    canvas.add(object);
+    canvas.renderAll();    
+}, null, {crossOrigin: 'Anonymous'});
+
+canvas.renderAll();
+    </script>
+</body>
+</html>
